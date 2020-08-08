@@ -3,7 +3,6 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-// Load store modules dynamically.
 const requireContext = require.context('./modules', true, /.*\.js$/)
 const modules = requireContext.keys()
   .map(file => [
@@ -18,7 +17,6 @@ const modules = requireContext.keys()
     }
   }, {})
 
-// console.log(modules);
 export default new Vuex.Store({
   modules,
   strict: process.env.NODE_ENV !== 'production'

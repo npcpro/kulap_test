@@ -20,8 +20,8 @@
 </template>
 
 <script type="text/javascript">
-    import lnc    from '../js/include';
 	  import MySnackbar     from '../../components/SnackBar';
+    import lnc    from '../../include/include';
     import axios  from 'axios';
     import moment from 'moment';
 	  import jwt_decode from 'jwt-decode'

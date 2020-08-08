@@ -94,7 +94,7 @@
 </template>
 
 <script type="text/javascript">
-    import lnc    from '../js/include';
+    import lnc    from '../../include/include';
 	  import MySnackbar     from '../../components/SnackBar';
     import axios  from 'axios';
     import moment from 'moment';
@@ -113,12 +113,12 @@
           btnLoading:false,
           drawer: null,
           user:{
-            firstname:'',
-            lastname:'',
-						username:'',
-						email:'',
-						password:'',
-						confirmPassword:'',
+            firstname:'aaaaaa',
+            lastname:'aaaaaa',
+						username:'aaaaaa',
+						email:'aaaaaa@gmail.com',
+						password:'aaaaaaaa',
+						confirmPassword:'aaaaaaaa',
 						recaptcha:'',				
           },
           showpass: false,
@@ -161,6 +161,7 @@
 							result += characters.charAt(Math.floor(Math.random() * charactersLength));
 					}
 					this.randomRecaptcha = result;
+					this.user.recaptcha = result
 				},
 				async submit(){
 							if(		this.user.firstname.length >= 3

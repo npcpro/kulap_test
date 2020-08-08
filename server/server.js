@@ -9,7 +9,9 @@ const app = express()
 			app.use(cors());
       app.use(bodyParser.json({limit: '5mb'}));
       app.use(bodyParser.urlencoded({limit: '5mb', extended: true}));
-      app.get("/",require('./api/custom'))
+      app.get("/",(_,res)=>{
+					res.sendFile(__dirname+'/index.html');
+			})
       app.get("/custom",require('./api/custom'))
       app.use("/api/users",require('./routers/users'))
       app.use('/public',express.static('public'))

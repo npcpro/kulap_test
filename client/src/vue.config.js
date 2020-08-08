@@ -1,1 +1,1 @@
-process.env.VUE_APP_BASE_URL = 'http://localhost:6000'
+process.env.VUE_APP_BASE_URL = 'http://localhost:1500'

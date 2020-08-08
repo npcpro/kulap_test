@@ -28,7 +28,6 @@
                                   class="input-group--focused"
                                   @keyup.enter="chkform"
                                 ></v-text-field>
-												<a target="_blank" href="/forgotpassword">For got password</a>
                      </v-form>
                    </v-card-text>
                    <v-card-actions>
@@ -46,7 +45,7 @@
 </template>
 
 <script type="text/javascript">
-    import lnc     			from '../js/include';
+    import lnc    			from '../../include/include';
 	  import MySnackbar   from '../../components/SnackBar';
     import axios   			from 'axios';
     import delay   			from 'delay';
@@ -129,7 +128,7 @@
 									this.snackAlert(rs.data.status,rs.data.msg)
 									this.vAlert(rs.data.status,rs.data.msg)
 											localStorage.setItem("token", JSON.stringify({token:token}));
-											location.assign(`/ordersold/history/${user._id}`)
+											// location.assign(`/dashboard`)
 								}else{
 								  this.snackAlert(false,rs.data.msg || `!Some Thing Wrong.`)
 								}
