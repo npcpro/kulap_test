@@ -75,6 +75,10 @@ export default {
         }
         return obj
       },
+			showConsole : (part) => {
+							const showHead = ['/login','/','/register','/waitactivate'].filter(i=>i === part)
+							return showHead.length === 0;
+			},
 			chkEmail : (email) => {
 						const emailPattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 						const chkEmail = email.match(new RegExp(emailPattern,'gim'))				 

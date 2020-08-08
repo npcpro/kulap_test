@@ -128,7 +128,7 @@
 									this.snackAlert(rs.data.status,rs.data.msg)
 									this.vAlert(rs.data.status,rs.data.msg)
 											localStorage.setItem("token", JSON.stringify({token:token}));
-											// location.assign(`/dashboard`)
+											location.assign(`/dashboard`)
 								}else{
 								  this.snackAlert(false,rs.data.msg || `!Some Thing Wrong.`)
 								}
@@ -142,8 +142,6 @@
 						this.alertMsg = msg
 						this.alertStatus = status
 						this.alertActive = true
-						// await delay(5000)
-						// this.alertStatus = false
 				},
         snackAlert(status,msg){
               this.snackBar = !this.snackBar

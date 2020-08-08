@@ -20,7 +20,6 @@
         drawer:true,
         selected:'',
 				sw_showHidden:false,
-				showConsole:false
       }
     },
     computed : {
@@ -28,6 +27,9 @@
 					user       				: 'user/user',
 					userLogin  				: 'user/login',
 				}),
+				showConsole(){
+						return lnc.showConsole(this.$route.path)
+				},
 		},
     methods : {
       sw_drawer(){
@@ -39,6 +41,13 @@
         localStorage.clear()
         location.assign(process.env.VUE_APP_BASE_URL)
       },    
+			logout(){
+				console.log('aaaaaab');
+        this.$store.dispatch('user/login',false)
+        this.$store.dispatch('user/user',{})
+        localStorage.clear()
+        location.assign(process.env.VUE_APP_BASE_URL)
+      },   
   	},
 		watch : {
     },
