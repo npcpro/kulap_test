@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div id="app">
+    <v-app>
+		  <v-app-bar        
+        color="indigo"
+        dark
+				app fixed
+				right
+				height="50"
+      >
+			<v-spacer></v-spacer>
+        <v-toolbar-title >
+					<v-btn color="" outlined text @click="openUrl('http://localhost:6000/login')">Login</v-btn>
+					<v-btn color="" outlined text @click="openUrl('http://localhost:6000/register')">Register</v-btn>
+				</v-toolbar-title>
+      </v-app-bar>
+      <v-content >
+        <v-container>
+				<v-layout row wrap>
+					<v-card-text class="text-sm-center mt-10 mb-2" primary-title>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<span style="color:rgba(83, 118, 195, 1);font-size:108px;font-weight:700;">WELCOME</span>
+					</v-card-text>
+				</v-layout>				
+				</v-container>
+      </v-content>
+    </v-app>
+  </div>
+
+ 	<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+			methods:{
+				openUrl(url){
+					window.open(url);
+				}
+			}
+    })
+  </script>
+</body>
+</html>
